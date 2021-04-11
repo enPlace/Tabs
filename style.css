@@ -7,6 +7,7 @@
 
 .tablist{
     display: inline-block;
+    width: 80%;
     list-style-type: none; 
     margin: 0; 
     padding: 0;
@@ -19,6 +20,10 @@
     margin: 10px;
     text-align: center; 
     float: left;
+}
+.newtab{
+    
+    margin-top: 15px;
 }
 .tab:hover {
     border-color: rgba(187, 124, 6, 0.644);
