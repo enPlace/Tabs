@@ -1,4 +1,4 @@
-const tabs = document.querySelectorAll('[data-tab-target]')
+let tabs = document.querySelectorAll('[data-tab-target]')
 const tabContent = document.querySelectorAll('[data-tab-content]')
 const tabtargs = document.querySelectorAll(tabs[0].dataset.tabTarget)
 tabList = document.querySelector(".tablist")
@@ -31,4 +31,15 @@ newTab.addEventListener('submit', e=>{
     newLi.setAttribute("data-tab-target", `#newtab${listLength}`)
     tabList.appendChild(newLi)
     console.log(listLength)
+    globalThis.tabs = document.querySelectorAll('[data-tab-target]')
+    tabs = document.querySelectorAll('[data-tab-target]')
+    newLi.addEventListener("click", e=>{
+        
+        tabs.forEach(tab=>{
+            tab.classList.remove("active")
+        })
+        newLi.classList.add("active")
+        
+    })
+ 
 })
