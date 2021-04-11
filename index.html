@@ -5,25 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src = "script.js" defer></script>
-    <link href="style.css" type ="text/css" rel= "stylesheet>"
+    <link href="style.css" type ="text/css" rel= "stylesheet">
     <title>Tabs</title>
 </head>
 <body>
-    <ul>
-        <li data-tab-target = "#home">Home</li>
-        <li data-tab-target = "#pricing">Pricing</li>
-        <li data-tab-target = "#about">About</li>
+    <ul class ="tablist">
+        <li class="tab a ctive" data-tab-target = "#home">Home</li>
+        <li class ="tab" data-tab-target = "#pricing">Pricing</li>
+        <li class ="tab" data-tab-target = "#about">About</li>
     </ul>
     <div class="tab-content">
-        <div id="home">
+        <div id="home" data-tab-content class = "active">
             <h1>Home</h1>
             <p>This is the home</p>
         </div>
-        <div id="pricing">
+        <div id="pricing" data-tab-content>
             <h1>Pricing</h1>
             <p>Some pricing information</p>
         </div>
-        <div id="about">
+        <div id="about" data-tab-content>
             <h1>About</h1>
             <p>Some information about the us</p>
         </div>

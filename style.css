@@ -1,0 +1,31 @@
+[data-tab-content]{
+    display: none; 
+}
+.active[data-tab-content]{
+    display: block; 
+}
+
+.tablist{
+    display: inline-block;
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0;
+    
+}
+
+.tab{
+    border-bottom: 5px solid #ccc;
+    width: 70px;
+    margin: 10px;
+    text-align: center; 
+    float: left;
+}
+.tab:hover {
+    border-color: rgba(187, 124, 6, 0.644);
+    cursor: pointer;
+}
+.tab.active{
+    border-color: rgba(187, 124, 6, 0.644);
+   
+
+}
