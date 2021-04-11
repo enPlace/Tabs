@@ -1,40 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link href = "style.css" type= "text/css" rel ="stylesheet">
-    <meta name ="viewport content ="width-device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "script.js" defer></script>
+    <link href="style.css" type ="text/css" rel= "stylesheet>"
+    <title>Tabs</title>
 </head>
 <body>
-    <h1>Tabs with HTML, CSS, & JS</h1>
-    <div class="tabs">
-        <div class="tabs__sidebar">
-            <button class="tabs__button" data-for-tab="1">Tab 1</button>
-            <button class="tabs__button" data-for-tab="2">Tab 2</button>
-            <button class="tabs__button" data-for-tab="3">Tab 3</button>
+    <ul>
+        <li data-tab-target = "#home">Home</li>
+        <li data-tab-target = "#pricing">Pricing</li>
+        <li data-tab-target = "#about">About</li>
+    </ul>
+    <div class="tab-content">
+        <div id="home">
+            <h1>Home</h1>
+            <p>This is the home</p>
         </div>
-        <div class="tabs__content" data-tab="1">
-            
-            <h2>Tab 1</h2>
-            <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+        <div id="pricing">
+            <h1>Pricing</h1>
+            <p>Some pricing information</p>
         </div>
-        <div class="tabs__content" data-tab="2">
-            <h2>Tab 2</h2>
-            <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+        <div id="about">
+            <h1>About</h1>
+            <p>Some information about the us</p>
         </div>
-        <div class="tabs__content" data-tab="3">
-            <h2>Tab 3</h2>
-            <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-        
-        </div>
-        
-
-
     </div>
 </body>
- 
 
-
-<script>
-
-</script>
 </html>
+
+
