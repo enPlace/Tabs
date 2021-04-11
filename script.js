@@ -1,7 +1,7 @@
 let tabs = document.querySelectorAll('[data-tab-target]')
 let tabContent = document.querySelectorAll('[data-tab-content]')
 const tabtargs = document.querySelectorAll(tabs[0].dataset.tabTarget)
-tabList = document.querySelector(".tablist")
+let tabList = document.querySelector(".tablist")
 contentContainer = document.querySelector(".tab-content")
 
 
@@ -27,19 +27,29 @@ tabs.forEach(tab =>{
 newTab = document.querySelector(".newtab")
 newTab.addEventListener('submit', e=>{
     e.preventDefault()
-    // make a new tab at the top with all relevent attributes and event listeners//
+   
+    // make a new tab at the top with all relevent attributes //
     const listLength = document.querySelectorAll("li").length
     const inputValue = document.querySelector("#tabname").value
     const newLi = document.createElement("li")
     newLi.textContent= inputValue
     newLi.classList.add("tab")
+    tabs = document.querySelectorAll('[data-tab-target]')
+
+    //CLONES AND REPLACES TABS, REMOVING EVENT LISTENERS////////////////////
+    tabs.forEach(tab=>{
+        tab.replaceWith(tab.cloneNode(true))
+    })
+
+
+    /////////////////Adding more attributes after the clone///////
     newLi.setAttribute("data-tab-target", `#newtab${listLength}`)
     tabList.appendChild(newLi)
     console.log(listLength)
-    globalThis.tabs = document.querySelectorAll('[data-tab-target]')
+    
  
 
-    //make new tab content 
+    //Creating content section for each new tab///
     newDiv = document.createElement("div")
     newh1 = document.createElement("h1")
     newp = document.createElement("p")
@@ -59,10 +69,11 @@ newTab.addEventListener('submit', e=>{
 
     tabs = document.querySelectorAll('[data-tab-target]')
     tabContent = document.querySelectorAll('[data-tab-content]')
-
     
+
 tabs.forEach(tab =>{
     tab.addEventListener('click', e =>{
+        
         const target = document.querySelector(tab.dataset.tabTarget)
         
         tabContent.forEach(content=>{
@@ -77,24 +88,7 @@ tabs.forEach(tab =>{
     
     })
 })
+
     newTab.reset()
-  /*   newLi.addEventListener("click", e=>{
-        const target = newLi.dataset.tabTarget
-        tabs.forEach(tab=>{
-            tab.classList.remove("active")
-        })
-        tabContent.forEach(content=>{
-            content.classList.remove('active')
-        })
 
-
-        newLi.setAttribute("class", "active")
-        target.classList.add("active")
-        
-
-        
-    })
- */
-
- 
 })
